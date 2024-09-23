@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wgh@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan',sans-serif;
+}
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+h4{
+    font-size: 20px;
+}
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+p{
+    font-size: 16px;
+    color:cadetblue;
+    margin: 15px 0 20px 0;
+}
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+    margin: 40px 0;
+}
+body {
+    width: 100%;
+    background-color: white;
+    transition: all 1.3s ease-in-out;
+}
+#header{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px,80px;
+background: inherit;
+box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+z-index:999;
+position: sticky;
+top: 0;
+left: 0;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 500;
+    color: inherit;
+    transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color:darkgoldenrod;
+}
+#navbar li a:active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background:crimson;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+
+}
+#Hero{
+    background-image:url("akatsuki.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#Hero h4{
+    padding-bottom: 15px;
+}
+#Hero p {
+    color:aquamarine;
+}
+#Hero button{
+    background-image: url("");
+    background-color:rgb(131, 14, 14);
+    border-radius: 15;
+    color: antiquewhite;
+    border: 0px;
+    padding: 14px 80px 14px 65px;
+    transition: all 2s ease-in-out;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    font-weight:700;
+    font-size: 15px;
+    
+}
+    #Hero button:hover {
+    background-color: rgb(220, 177, 20);
+    border: 10px transparent;
+    
+   
+}
+#icon {
+    overflow: hidden;
+    margin: 8px;
+    min-width: 240px;
+    max-width: 320px;
+    width: 100%;
+}
+#icon img{
+    transition: all 1.3s;
+    box-sizing: border-box;
+    max-width: 50%;
+}
+#icon:hover img{
+    transform: scaleX(1.1)
+    rotate(360deg);
+}
+#feature .fe-box{
+    width: 180px;
+    text-align:center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border: 1px solid inherit;
+    border-radius: 4px;
+    margin: 15px 0;
+    transition: all 0.9s ease-in-out;
+    height: 180px;
+}
+#feature .fe-box:hover{
+    box-shadow:10px 10px 54px rgb(176, 7, 7);
+    transform: scale(1.2);
+}
+#feature .fe-box h6{
+    background-color: lightsalmon;
+    padding: 9px  8px   6px   8px;
+    line-height: 1;
+}
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: 1opx;
+}
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.dark-mode{
+    background-color:#242424;
+    color: white;
+    transition: all 1.3s ease-in-out;
+}
+label{
+    position: relative;
+    width: 63px;
+    height: 30px;
+    background: white;
+    display: block;
+    border-radius: 20px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4),inset 0px -5px 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+}
+label:after{
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 3px;
+    left: 3%;
+    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+input{
+width:0px;
+height: 0px;
+visibility: hidden;
+}
+input:checked + label:after{
+    left:60px;
+    transform: translatex(-100%);
+    background: linear-gradient(180deg,#777,#3a3a3a);
+}
+label:active:after{
+   width: 40px; 
+}
